@@ -17,10 +17,55 @@
 </head>
 <body>
     <script>
-        var canvas, ctx, ALTURA, LARGURA, frames = 0;
+        var canvas, ctx, ALTURA, LARGURA, frames = 0, maxJumps = 3,
+        
+        floor = {
+            y: 550,
+            altura: 50,
+            cor: "#ffdf70",
 
+            render: function(){
+                ctx.fillStyle = this.cor;
+                ctx.fillRect(0,this.y, LARGURA, this.altura);
+            }
+        },
+
+        bloco = {
+            x: 50,
+            y: 0,
+            altura: 50,
+            largura: 50,
+            cor: "#ff4e4e",
+            gravity: 1.5,
+            speed: 0,
+            jumpForce: 20,
+            qntJump: 0,
+
+            update: function(){
+                this.speed += this.gravity;
+                this.y += this.speed;
+                
+                if (this.y > floor.y - this.altura){
+                    this.y = floor.y - this.altura;
+                    this.qntJump = 0;
+                }
+            },
+
+            jump: function(){
+                if(this.qntJump < maxJumps){
+                    this.speed = -this.jumpForce;
+                    this.qntJump++;
+                }
+            },
+
+            render: function(){
+                ctx.fillStyle = this.cor;
+                ctx.fillRect(this.x, this.y, this.largura,this.altura);
+            }
+        };
+        
         function click(event){
-            alert("clicou");
+            bloco.jump();
         }
 
         function main(){
@@ -53,11 +98,15 @@
 
         function update(){
             frames++;
+            bloco.update();
         }
 
         function render(){
             ctx.fillStyle = "#50beff";
             ctx.fillRect(0,0,LARGURA, ALTURA);
+
+            floor.render();
+            bloco.render();
         }
 
         main();
