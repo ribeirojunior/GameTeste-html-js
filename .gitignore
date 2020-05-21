@@ -1,0 +1,150 @@
+# Criado por https://www.gitignore.io/api/node,bower,osx,linux,windows,dropbox,sass,less,grunt,sublimetext,code
+
+# ## Nó ###
+# Logs
+Histórico
+* .log
+npm-debug.log *
+
+# Dados de tempo de execução
+pids
+* .pid
+* .seed
+
+# Diretório para bibliotecas instrumentadas geradas por jscoverage / JSCover
+lib-cov
+
+# Diretório de cobertura usado por ferramentas como Istambul
+cobertura
+
+# Armazenamento intermediário pesado (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunhido
+
+# configuração do node-waf
+.lock-wscript
+
+# Complementos binários compilados (http://nodejs.org/api/addons.html)
+construir / Liberar
+
+# Diretório de dependência
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
+node_modules
+
+# Diretório de cache npm opcional
+.npm
+
+# Histórico opcional do REPL
+.node_repl_history
+
+
+# ## Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+
+
+# ## OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ícone deve terminar com dois \ r
+Ícone
+
+
+# Miniaturas
+._ *
+
+# Arquivos que podem aparecer na raiz de um volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Diretórios potencialmente criados no compartilhamento AFP remoto
+.AppleDB
+.AppleDesktop
+ Pasta Lixeira em  Rede
+ Itens temporários
+.apdisk
+
+
+# ## Linux ###
+* ~
+
+# Preferências de diretório do KDE
+.diretório
+
+# Pasta de lixo do Linux que pode aparecer em qualquer partição ou disco
+.Trash- *
+
+
+# ## Windows ###
+# Caches de arquivos de imagem do Windows
+Thumbs.db
+ehthumbs.db
+
+# Arquivo de configuração de pasta
+Desktop.ini
+
+# Lixeira usada em compartilhamentos de arquivos
+$ RECYCLE.BIN /
+
+# Arquivos do Windows Installer
+* .cab
+* .msi
+* .msm
+* .msp
+
+# Atalhos do Windows
+* .lnk
+
+
+# ## Dropbox ###
+# Configurações e caches do Dropbox
+.Dropbox
+.dropbox.attr
+.dropbox.cache
+
+
+# ## Sass ###
+.sass-cache /
+* .css.map
+
+
+# ## Menos ###
+* .css
+
+
+# ## grunhido ###
+# O Grunt geralmente compila arquivos dentro deste diretório
+dist /
+
+# O Grunt normalmente processa arquivos como café, bússola ... dentro do diretório .tmp
+.tmp /
+
+
+# ## SublimeText ###
+# arquivos de cache para texto sublime
+* .tmlanguage.cache
+* .tmPreferences.cache
+* .stTheme.cache
+
+# arquivos da área de trabalho são específicos do usuário
+* .sublime-workspace
+
+# arquivos de projeto devem ser verificados no repositório, a menos que um
+# proporção de colaboradores provavelmente não usará SublimeText
+# * .sublime-project
+
+# arquivo de configuração sftp
+sftp-config.json
+
+
+# ## Code ###
+# Código do Visual Studio - https://code.visualstudio.com/
+.settings /
+.vscode /
